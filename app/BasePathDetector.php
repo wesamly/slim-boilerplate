@@ -12,7 +12,7 @@ class BasePathDetector {
     }
 
     public function getBasePath() {
-        return dirname($this->serverVars['SCRIPT_NAME']);
+        return rtrim(dirname($this->serverVars['SCRIPT_NAME']), '/');
     }
     
 }
